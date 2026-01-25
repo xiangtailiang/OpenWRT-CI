@@ -37,6 +37,7 @@ sed -i "s/hostname='.*'/hostname='$WRT_NAME'/g" $CFG_FILE
 echo "CONFIG_PACKAGE_luci=y" >> ./.config
 echo "CONFIG_LUCI_LANG_zh_Hans=y" >> ./.config
 echo "CONFIG_PACKAGE_luci-theme-$WRT_THEME=y" >> ./.config
+echo "CONFIG_PACKAGE_luci-theme-bootstrap=y" >> ./.config
 if [[ "$WRT_THEME" != "bootstrap" && "$WRT_THEME" != "material" ]]; then
 	echo "CONFIG_PACKAGE_luci-app-$WRT_THEME-config=y" >> ./.config
 fi
